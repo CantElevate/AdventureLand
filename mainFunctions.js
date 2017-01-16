@@ -41,7 +41,7 @@ function loot()
     for(id in parent.chests)
     {
         var chest=parent.chests[id];
-        if(safeties && (chest.items>character.esize || chest.last_loot && 		mssince(chest.last_loot)<1600)) continue;
+        if(safeties && (chest.items>character.esize || chest.last_loot && mssince(chest.last_loot)<1600)) continue;
         chest.last_loot=last_loot;
         parent.socket.emit("open_chest",{id:id});
         looted++;
@@ -56,7 +56,6 @@ function getNumChests()
     {
         count++;
     }
-    
+
     return count;
 }
-
