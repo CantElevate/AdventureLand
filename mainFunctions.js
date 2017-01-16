@@ -48,3 +48,15 @@ function loot()
         //if(looted==2) break;
     }
 }
+
+function getNumChests()
+{
+    var count = 0;
+    for(id in parent.chests)
+    {
+        count++;
+    }
+    
+    return count;
+}
+
